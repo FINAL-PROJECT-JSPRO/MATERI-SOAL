@@ -1,0 +1,25 @@
+title: `<h1>FUNCTION DECLARATION</h1>`
+body: `
+<h1 class="chapterSubtitle">Function Declarations</h1>
+<p class="chapterBody">In JavaScript, there are many ways to create a function. One way to create a function is by using a <em>function declaration</em>. Just like how a variable declaration binds a value to a variable name, a function declaration binds a function to a name, or an <em>identifier</em>.
+Take a look at the anatomy of a function declaration below:</p>
+<img src="https://s3.amazonaws.com/codecademy-content/courses/learn-javascript-functions/Diagram/declaration.svg" alt="Diagram showing the syntax of a function declaration" class="img__1JGFO2nlisObc3KeOSGPRp">
+
+<p class="chapterBody">A function declaration consists of: </p>
+<ul class="chapterUnorderedList">
+<li class="chapterList">The <code class="chapterCode">function</code> keyword.</li>
+<li class="chapterList">The name of the function, or its identifier, followed by parentheses.</li>
+<li class="chapterList">A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, <code class="chapterCode">{ }</code>.</li>
+</ul>
+<p class="chapterBody">A function declaration is a function that is bound to an identifier, or name. In the next exercise we’ll go over how to run the code inside the function body. </p>
+<p class="chapterBody">We should also be aware of the <em>hoisting</em> feature in JavaScript which allows access to function declarations before they’re defined. </p>
+<p class="chapterBody">Take a look at example of hoisting:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">greetWorld</span>()); <span class="code-comment">// Output: Hello, World!</span>
+
+<span class="code-keyword">function</span> <span class="code-def">greetWorld</span>() {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Hello, World!'</span>);
+}</div></span></pre>
+<p class="chapterBody">Notice how hoisting allowed <code class="chapterCode">greetWorld()</code> to be called before the <code class="chapterCode">greetWorld()</code> function was defined! Since hoisting isn’t considered good practice, we simply want you to be aware of this feature.</p>
+<p class="chapterBody">If you want to read more about hoisting, check out <a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting" target="_blank" rel="noopener">MDN documentation on hoisting</a>. </p>
+`
+SubjectId: 4

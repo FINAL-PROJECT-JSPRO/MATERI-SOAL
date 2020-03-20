@@ -1,0 +1,20 @@
+title:
+body: `
+<h1 class="chapterSubtitle">Else If Statements</h1>
+<p class="chapterBody">We can add more conditions to our <code class="chapterCode">if...else</code> with an <code class="chapterCode">else if</code> statement. The <code class="chapterCode">else if</code> statement allows for more than two possible outcomes. You can add as many <code class="chapterCode">else if</code> statements as you’d like, to make more complex conditionals!</p>
+<p class="chapterBody">The <code class="chapterCode">else if</code> statement always comes after the <code class="chapterCode">if</code> statement and before the <code class="chapterCode">else</code> statement. The <code class="chapterCode">else if</code> statement also takes a condition. Let’s take a look at the syntax:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">let</span> <span class="code-def">stopLight</span> <span class="code-operator">=</span> <span class="code-string">'yellow'</span>;
+
+<span class="code-keyword">if</span> (<span class="code-variable">stopLight</span> <span class="code-operator">===</span> <span class="code-string">'red'</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Stop!'</span>);
+} <span class="code-keyword">else</span> <span class="code-keyword">if</span> (<span class="code-variable">stopLight</span> <span class="code-operator">===</span> <span class="code-string">'yellow'</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Slow down.'</span>);
+} <span class="code-keyword">else</span> <span class="code-keyword">if</span> (<span class="code-variable">stopLight</span> <span class="code-operator">===</span> <span class="code-string">'green'</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Go!'</span>);
+} <span class="code-keyword">else</span> {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Caution, unknown!'</span>);
+}</div></span></pre>
+<p class="chapterBody">The <code class="chapterCode">else if</code> statements allow you to have multiple possible outcomes. <code class="chapterCode">if</code>/<code class="chapterCode">else if</code>/<code class="chapterCode">else</code> statements are read from top to bottom, so the first condition that evaluates to <code class="chapterCode">true</code> from the top to bottom is the block that gets executed. </p>
+<p class="chapterBody">In the example above, since <code class="chapterCode">stopLight === 'red'</code> evaluates to <code class="chapterCode">false</code> and <code class="chapterCode">stopLight === 'yellow'</code> evaluates to <code class="chapterCode">true</code>, the code inside the first <code class="chapterCode">else if</code> statement is executed. The rest of the conditions are not evaluated. If none of the conditions evaluated to <code class="chapterCode">true</code>, then the code in the <code class="chapterCode">else</code> statement would have executed. </p>
+`
+SubjectId: 2

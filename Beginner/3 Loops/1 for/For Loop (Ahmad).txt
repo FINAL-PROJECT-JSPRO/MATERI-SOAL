@@ -1,0 +1,29 @@
+title: `<h1 class="chapterTitle">FOR LOOP</h1>`
+body: `
+<h1 class="chapterSubtitle">The For Loop</h1>
+<p class="chapterBody">Instead of writing out the same code over and over, loops allow us to tell computers to repeat a given block of code on its own. One way to give computers these instructions is with a <code class="chapterCode">for</code> loop. </p>
+<p class="chapterBody">The typical <code class="chapterCode">for</code> loop includes an <em>iterator variable</em> that usually appears in all three expressions. The iterator variable is initialized, checked against the stopping condition, and assigned a new value on each loop iteration. Iterator variables can have any name, but it’s best practice to use a descriptive variable name.</p>
+<p class="chapterBody">A <code class="chapterCode">for</code> loop contains three expressions separated by <code class="chapterCode">;</code> inside the parentheses: </p>
+<ol class="chapterOrderedList">
+<li class="chapterList">an <em>initialization</em> starts the loop and can also be used to declare the iterator variable.</li>
+<li class="chapterList">a <em>stopping condition</em> is the condition that the iterator variable is evaluated against— if the condition evaluates to <code class="chapterCode">true</code> the code block will run, and if it evaluates to <code class="chapterCode">false</code> the code will stop.</li>
+<li class="chapterList">an <em>iteration statement</em> is used to update the iterator variable on each loop.</li>
+</ol>
+<p class="chapterBody">The <code class="chapterCode">for</code> loop syntax looks like this:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">for</span> (<span class="code-keyword">let</span> <span class="code-def">counter</span> <span class="code-operator">=</span> <span class="code-number">0</span>; <span class="code-variable">counter</span> <span class="code-operator">&lt;</span> <span class="code-number">4</span>; <span class="code-variable">counter</span><span class="code-operator">++</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">counter</span>);
+}</div></span></pre>
+<p class="chapterBody">In this example, the output would be the following:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer">0
+1
+2
+3</div></span></pre><p class="chapterBody">Let’s break down the example:</p>
+<ul class="chapterUnorderedList">
+<li class="chapterList">The initialization is <code class="chapterCode">let counter = 0</code>, so the loop will start counting at <code class="chapterCode">0</code>.</li>
+<li class="chapterList">The stopping condition is <code class="chapterCode">counter &lt; 4</code>, meaning the loop will run as long as the iterator variable, <code class="chapterCode">counter</code>, is less than 4.</li>
+<li class="chapterList">The iteration statement is <code class="chapterCode">counter++</code>. This means after each loop, the value of <code class="chapterCode">counter</code> will increase by 1. For the first iteration <code class="chapterCode">counter</code> will equal <code class="chapterCode">0</code>, for the second iteration <code class="chapterCode">counter</code> will equal 1, and so on.</li>
+<li class="chapterList">The code block is inside of the curly braces, <code class="chapterCode">console.log(counter)</code>, will execute until the condition evaluates to <code class="chapterCode">false</code>. The condition will be false when <code class="chapterCode">counter</code> is greater than or equal to 4 — the point that the condition becomes false is sometimes called the <em>stop condition</em>.</li>
+</ul>
+<p class="chapterBody">This <code class="chapterCode">for</code> loop makes it possible to write <code class="chapterCode">0</code>, <code class="chapterCode">1</code>, <code class="chapterCode">2</code>, and <code class="chapterCode">3</code> programmatically.</p>
+`
+SubjectId: 3

@@ -1,0 +1,25 @@
+title: `<h1 class="chapterTitle">WHILE LOOP</h1>`
+body: `
+<h1 class="chapterSubtitle">The While Loop</h1>
+<p class="chapterBody">You’re doing great! We’re going to teach you about a different type of loop: the <code class="chapterCode">while</code> loop. To start, let’s convert a <code class="chapterCode">for</code> loop into a <code class="chapterCode">while</code> loop:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-comment">// A for loop that prints 1, 2, and 3</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> <span class="code-def">counterOne</span> <span class="code-operator">=</span> <span class="code-number">1</span>; <span class="code-variable">counterOne</span> <span class="code-operator">&lt;</span> <span class="code-number">4</span>; <span class="code-variable">counterOne</span><span class="code-operator">++</span>){
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">counterOne</span>);
+}
+
+<span class="code-comment">// A while loop that prints 1, 2, and 3</span>
+<span class="code-keyword">let</span> <span class="code-def">counterTwo</span> <span class="code-operator">=</span> <span class="code-number">1</span>;
+<span class="code-keyword">while</span> (<span class="code-variable">counterTwo</span> <span class="code-operator">&lt;</span> <span class="code-number">4</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">counterTwo</span>);
+  <span class="code-variable">counterTwo</span><span class="code-operator">++</span>;
+}</div></span></pre>
+<p class="chapterBody">Let’s break down what’s happening with our <code class="chapterCode">while</code> loop syntax: </p>
+<ul class="chapterUnorderedList">
+<li class="chapterList">The <code class="chapterCode">counterTwo</code> variable is declared before the loop. We can access it inside our <code class="chapterCode">while</code> loop since it’s in the global scope. </li>
+<li class="chapterList">We start our loop with the keyword <code class="chapterCode">while</code> followed by our stopping condition, or <em>test condition</em>. This will be evaluated before each round of the loop. While the condition evaluates to <code class="chapterCode">true</code>, the block will continue to run. Once it evaluates to <code class="chapterCode">false</code> the loop will stop. </li>
+<li class="chapterList">Next, we have our loop’s code block which prints <code class="chapterCode">counterTwo</code> to the console and increments <code class="chapterCode">counterTwo</code>. </li>
+</ul>
+<p class="chapterBody">What would happen if we didn’t increment <code class="chapterCode">counterTwo</code> inside our block? If we didn’t include this, <code class="chapterCode">counterTwo</code> would always have its initial value, <code class="chapterCode">1</code>. That would mean the testing condition <code class="chapterCode">counterTwo &lt; 4</code> would always evaluate to <code class="chapterCode">true</code> and our loop would never stop running! This is called an <em>infinite loop</em> and it’s something we always want to <strong>avoid</strong>. Infinite loops can take up all of your computer’s processing power potentially freezing your computer. </p>
+<p class="chapterBody">So you may be wondering when to use a <code class="chapterCode">while</code> loop! The syntax of a <code class="chapterCode">for</code> loop is ideal when we know how many times the loop should run, but we don’t always know this in advance. Think of eating like a <code class="chapterCode">while</code> loop: when you start taking bites, you don’t know the exact number you’ll need to become full. Rather you’ll eat <code class="chapterCode">while</code> you’re hungry. In situations when we want a loop to execute an undetermined number of times, <code class="chapterCode">while</code> loops are the best choice.</p>
+`
+SubjectId: 3

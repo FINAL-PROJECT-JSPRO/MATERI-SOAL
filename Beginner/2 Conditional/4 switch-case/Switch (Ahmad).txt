@@ -1,0 +1,42 @@
+title: `<h1 class="chapterTitle">SWITCH</h1>`
+body: `
+<h1 class="chapterSubtitle">The switch keyword</h1>
+<p class="chapterBody"><code class="chapterCode">else if</code> statements are a great tool if we need to check multiple conditions. In programming, we often find ourselves needing to check multiple values and handling each of them differently. For example:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">let</span> <span class="code-def">groceryItem</span> <span class="code-operator">=</span> <span class="code-string">'papaya'</span>;
+
+<span class="code-keyword">if</span> (<span class="code-variable">groceryItem</span> <span class="code-operator">===</span> <span class="code-string">'tomato'</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Tomatoes are $0.49'</span>);
+} <span class="code-keyword">else</span> <span class="code-keyword">if</span> (<span class="code-variable">groceryItem</span> <span class="code-operator">===</span> <span class="code-string">'papaya'</span>){
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Papayas are $1.29'</span>);
+} <span class="code-keyword">else</span> {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Invalid item'</span>);
+}</div></span></pre>
+<p class="chapterBody">In the code above, we have a series of conditions checking for a value that matches a  <code class="chapterCode">groceryItem</code> variable. Our code works fine, but imagine if we needed to check 100 different values! Having to write that many <code class="chapterCode">else if</code> statements sounds like a pain!</p>
+<p class="chapterBody">A <code class="chapterCode">switch</code> statement provides an alternative syntax that is easier to read and write. A <code class="chapterCode">switch</code> statement looks like this:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">let</span> <span class="code-def">groceryItem</span> <span class="code-operator">=</span> <span class="code-string">'papaya'</span>;
+
+<span class="code-keyword">switch</span> (<span class="code-variable">groceryItem</span>) {
+  <span class="code-keyword">case</span> <span class="code-string">'tomato'</span>:
+    <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Tomatoes are $0.49'</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> <span class="code-string">'lime'</span>:
+    <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Limes are $1.49'</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> <span class="code-string">'papaya'</span>:
+    <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Papayas are $1.29'</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">default</span>:
+    <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'Invalid item'</span>);
+    <span class="code-keyword">break</span>;
+}
+
+<span class="code-comment">// Prints 'Papayas are $1.29'</span></div></span></pre>
+<ul class="chapterUnorderedList">
+<li class="chapterList">The <code class="chapterCode">switch</code> keyword initiates the statement and is followed by <code class="chapterCode">( ... )</code>, which contains the value that each <code class="chapterCode">case</code> will compare. In the example, the value or expression of the <code class="chapterCode">switch</code> statement is <code class="chapterCode">groceryItem</code>.</li>
+<li class="chapterList">Inside the block, <code class="chapterCode">{ ... }</code>, there are multiple <code class="chapterCode">case</code>s. The <code class="chapterCode">case</code> keyword checks if the expression matches the specified value that comes after it. The value following the first <code class="chapterCode">case</code> is <code class="chapterCode">'tomato'</code>. If the value of <code class="chapterCode">groceryItem</code> equalled <code class="chapterCode">'tomato'</code>, that <code class="chapterCode">case</code>‘s <code class="chapterCode">console.log()</code> would run.</li>
+<li class="chapterList">The value of <code class="chapterCode">groceryItem</code> is <code class="chapterCode">'papaya'</code>, so the third <code class="chapterCode">case</code> runs— <code class="chapterCode">Papayas are $1.29</code> is logged to the console.</li>
+<li class="chapterList">The <code class="chapterCode">break</code> keyword tells the computer to exit the block and not execute any more code or check any other cases inside the code block. Note: Without the <code class="chapterCode">break</code> keyword at the end of each case, the program would execute the code for all matching cases and the default code as well. This behavior is different from <code class="chapterCode">if</code>/<code class="chapterCode">else</code> conditional statements which execute only one block of code. </li>
+<li class="chapterList">At the end of each <code class="chapterCode">switch</code> statement, there is a <code class="chapterCode">default</code> statement. If none of the <code class="chapterCode">case</code>s are true, then the code in the <code class="chapterCode">default</code> statement will run.</li>
+</ul>
+`
+SubjectId: 2

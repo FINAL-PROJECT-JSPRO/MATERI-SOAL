@@ -1,0 +1,20 @@
+title: `<h1>FUNCTION EXPRESSION</h1>`
+body: `
+<h1 class="chapterSubtitle">Function Expressions</h1>
+<p class="chapterBody">Another way to define a function is to use a <em>function expression</em>. To define a function inside an expression, we can use the <code class="chapterCode">function</code> keyword. In a function expression, the function name is usually omitted. A function with no name is called an <em>anonymous function</em>. A function expression is often stored in a variable in order to refer to it.</p>
+<p class="chapterBody">Consider the following function expression:</p>
+<img src="https://s3.amazonaws.com/codecademy-content/courses/learn-javascript-functions/Diagram/expression.svg" alt="defining a function expression" class="img__1JGFO2nlisObc3KeOSGPRp">
+
+
+<p class="chapterBody">To declare a function expression:</p>
+<ol class="chapterOrderedList">
+<li class="chapterList"><p class="chapterBody">Declare a variable to make the variable’s name be the name, or identifier, of your function. Since the release of ES6, it is common practice to use <code class="chapterCode">const</code> as the keyword to declare the variable. </p>
+</li>
+<li class="chapterList"><p class="chapterBody">Assign as that variable’s value an anonymous function created by using the <code class="chapterCode">function</code> keyword followed by a set of parentheses with possible parameters. Then a set of curly braces that contain the function body.</p>
+</li>
+</ol>
+<p class="chapterBody">To invoke a function expression, write the name of the variable in which the function is stored followed by parentheses enclosing any arguments being passed into the function.</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-variable">variableName</span>(<span class="code-variable">argument1</span>, <span class="code-variable">argument2</span>)</div></span></pre>
+<p class="chapterBody">Unlike function declarations, function expressions are not hoisted so they cannot be called before they are defined. </p>
+`
+SubjectId: 4

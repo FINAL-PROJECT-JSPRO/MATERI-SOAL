@@ -1,0 +1,15 @@
+title: `<h1>PARAMETERS AND ARGUMENTS</h1>`
+body: `
+<h1 class="chapterSubtitle">Parameters and Arguments</h1>
+<p class="chapterBody">So far, the functions we’ve created execute a task without an input. However, some functions can take inputs and use the inputs to perform a task. When declaring a function, we can specify its <em>parameters</em>. Parameters allow functions to accept input(s) and perform a task using the input(s). We use parameters as placeholders for information that will be passed to the function when it is called. </p>
+<p class="chapterBody">Let’s observe how to specify parameters in our function declaration:</p>
+<img src="https://s3.amazonaws.com/codecademy-content/courses/learn-javascript-functions/Diagram/function+parameters.svg" alt="JavaScript syntax for declaring a function with parameters" class="chapterImage">
+<p class="chapterBody">In the diagram above, <code class="chapterCode">calculateArea()</code>, computes the area of a rectangle, based on two inputs, <code class="chapterCode">width</code> and <code class="chapterCode">height</code>. The parameters are specified between the parenthesis as <code class="chapterCode">width</code> and <code class="chapterCode">height</code>, and inside the function body, they act just like regular variables. <code class="chapterCode">width</code> and <code class="chapterCode">height</code> act as placeholders for values that will be multiplied together. </p>
+<p class="chapterBody">When calling a function that has parameters, we specify the values in the parentheses that follow the function name. The values that are passed to the function when it is called are called <em>arguments</em>. Arguments can be passed to the function as values or variables. </p>
+<img src="https://s3.amazonaws.com/codecademy-content/courses/learn-javascript-functions/Diagram/by_value.svg" alt="JavaScript syntax for invoking a function with arguments as values" class="chapterImage">
+<p class="chapterBody">In the function call above, the number <code class="chapterCode">10</code> is passed as the <code class="chapterCode">width</code> and <code class="chapterCode">6</code> is passed as <code class="chapterCode">height</code>. Notice that the order in which arguments are passed and assigned follows the order that the parameters are declared.  </p>
+<img src="https://s3.amazonaws.com/codecademy-content/courses/learn-javascript-functions/Diagram/by_variable.svg" alt="JavaScript syntax for invoking a function with arguments as variables" class="chapterImage">
+<p class="chapterBody">The variables <code class="chapterCode">rectWidth</code> and <code class="chapterCode">rectHeight</code> are initialized with the values for the height and width of a rectangle before being used in the function call. </p>
+<p class="chapterBody">By using parameters, <code class="chapterCode">calculateArea()</code> can be reused to compute the area of any rectangle! Functions are a powerful tool in computer programming so let’s practice creating and calling functions with parameters.</p>
+`
+SubjectId: 4

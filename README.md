@@ -35,17 +35,26 @@
 ## chapterCodeContainer
     Container untuk code di dalam CodeBlock
 
+## chapterImage
+    Image di dalam chapterBody
+
 
 # CODE STYLING
 ```javascript
+let messsage = 'This is a message'
 if (true) {
-    console.log('This message will print!'); 
+    console.log(message); 
 } 
-// Prints "This message will print!"
+// This is comment
 ```
+## code-def
+    message
+
+## code-operator
+    =
 
 ## code-keyword
-    if
+    let, if
 
 ## code-atom
     true
@@ -57,7 +66,7 @@ if (true) {
     log
 
 ## code-string
-    "This message will print!"
+    'This is a message'
 
 ## code-comment
-    // Prints "This message will print!"
+    // This is comment
