@@ -7,6 +7,19 @@
     `
     SubjectId: 1
 
+# OUTPUT
+```javascript
+{
+  "id": 10,
+  "title": "<h1 class=\"chapterTitle\"></h1>",
+  "body": "<h1 class=\"chapterSubtitle\">Do...While    Statements</h1><p class=\"chapterBody\">In some cases, you want a piece of code to run at least once and blablabla...",
+"SubjectId": 3,
+"createdAt": "2020-03-20T15:04:46.417Z",
+"updatedAt": "2020-03-20T15:04:46.417Z"
+}
+```
+![Screenshot](./SS.png)
+
 <br>
 
 # CLASS LIST
@@ -70,3 +83,6 @@ if (true) {
 
 ## code-comment
     // This is comment
+
+## code-parameter
+    Parameters / arguments
