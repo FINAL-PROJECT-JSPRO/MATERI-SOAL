@@ -1,0 +1,10 @@
+title: `<p class="chapterTitle">Asynchronus JavaScript</p>`
+body: `
+<p class="chapterBody">For reasons illustrated earlier (e.g. related to blocking), many Web API features now use asynchronous code to run, especially those that access or fetch some kind of resource from an external device, such as fetching a file from the network, accessing a database and returning data from it, accessing a video stream from a web cam, or broadcasting the display to a VR headset.</p>
+<p class="chapterBody">Why is this difficult to get to work using synchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
+<pre class="brush: js line-numbers  language-js"><code class="  language-js"><span class="token keyword">let</span> response <span class="token operator">=</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'myImage.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> blob <span class="token operator">=</span> response<span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// display your image blob in the UI somehow</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p class="chapterBody">That's because you don't know how long the image will take to download, so when you come to run the second line it will throw an error (possibly intermittently, possibly every time) because the response is not yet available. Instead, you need your code to wait until the response is returned before it tries to do anything else to it.</p>
+<p class="chapterBody">There are two main types of asynchronous code style you'll come across in JavaScript code, old-style callbacks and newer promise-style code. In the below sections we'll review each of these in turn.</p>
+`
