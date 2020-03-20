@@ -1,0 +1,20 @@
+title: `<p class="chapterTitle"></p>`
+body: `
+<p class="chapterBody">In life, we make decisions based on circumstances. Think of an everyday decision as mundane as falling asleep— if we are tired, we go to bed, otherwise, we wake up and start our day.</p>
+<p class="chapterBody">These if-else decisions can be modeled in code by creating <em>conditional statements</em>.  A conditional statement checks specific condition(s) and performs a task based on the condition(s).</p>
+<h1 class="chapterSubtitle">The if keyword</h1>
+<p class="chapterBody">We often perform a task based on a condition. For example, if the weather is nice today, then we will go outside. If the alarm clock rings, then we’ll shut it off. If we’re tired, then we’ll go to sleep.</p>
+<p class="chapterBody">In programming, we can also perform a task based on a condition using an <code class="chapterCode">if</code> statement:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">if</span> (<span class="code-atom">true</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'This message will print!'</span>); 
+} 
+<span class="code-comment">// Prints "This message will print!"</span></div></span></pre>
+<p class="chapterBody">Notice in the example above, we have an <code class="chapterCode">if</code> statement. The <code class="chapterCode">if</code> statement is composed of:</p>
+<ul class="chapterUnorderedList">
+<li class="chapterOrderedList">The <code class="chapterCode">if</code> keyword followed by a set of parentheses <code class="chapterCode">()</code> which is followed by a <em>code block</em>, or <em>block statement</em>, indicated by a set of curly braces <code class="chapterCode">{}</code>.</li>
+<li class="chapterOrderedList">Inside the parentheses <code class="chapterCode">()</code>, a condition is provided that evaluates to <code class="chapterCode">true</code> or <code class="chapterCode">false</code>.</li>
+<li class="chapterOrderedList">If the condition evaluates to <code class="chapterCode">true</code>, the code inside the curly braces <code class="chapterCode">{}</code> runs, or <em>executes</em>. </li>
+<li class="chapterOrderedList">If the condition evaluates to <code class="chapterCode">false</code>, the block won’t execute.</li>
+</ul>
+`
+SubjectId: 2

@@ -1,0 +1,23 @@
+title: `<p class="chapterTitle">VARIABLES</p>`
+body: `
+<p class="chapterBody">In programming, a <em>variable</em> is a container for a value. You can think of variables as little containers for information that live in a computer’s memory. Information stored in variables, such as a username, account number, or even personalized greeting can then be found in memory. </p>
+<p class="chapterBody">Variables also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves.</p>
+<p class="chapterBody">In short, variables label and store data in memory.  There are only a few things you can do with variables:</p>
+<ol class="chapterOrderedList">
+<li class="chapterList">Create a variable with a descriptive name.</li>
+<li class="chapterList">Store or update information stored in a variable.</li>
+<li class="chapterList">Reference or “get” information stored in a variable.</li>
+</ol>
+<ul class="chapterUnorderedList">
+<li class="chapterList">Variables hold reusable data in a program and associate it with a name.</li>
+<li class="chapterList">Variables are stored in memory.</li>
+<li class="chapterList">The <code class="chapterCode">var</code> keyword is used in pre-ES6 versions of JS.</li>
+<li class="chapterList"><code class="chapterCode">let</code> is the preferred way to declare a variable when it can be reassigned, and <code class="chapterCode">const</code> is the preferred way to declare a variable with a constant value.</li>
+<li class="chapterList">Variables that have not been initialized store the primitive data type <code class="chapterCode">undefined</code>.</li>
+<li class="chapterList">Mathematical assignment operators make it easy to calculate a new value and assign it to the same variable.</li>
+<li class="chapterList">The <code class="chapterCode">+</code> operator is used to concatenate strings including string values held in variables</li>
+<li class="chapterList">In ES6, template literals use backticks <code class="chapterCode">`</code> and <code class="chapterCode">${}</code> to interpolate values into a string.</li>
+<li class="chapterList">The <code class="chapterCode">typeof</code> keyword returns the data type (as a string) of a value.</li>
+</ul>
+`
+SubjectId: 1

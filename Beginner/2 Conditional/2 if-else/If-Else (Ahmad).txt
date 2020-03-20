@@ -1,0 +1,18 @@
+title:
+body: `
+<h1 class="chapterSubtitle">If...Else Statements</h1>
+<p class="chapterBody">In the previous exercise, we used an <code class="chapterCode">if</code> statement that checked a condition to decide whether or not to run a block of code. In many cases, we’ll have code we want to run if our condition evaluates to <code class="chapterCode">false</code>.  If we wanted to add some default behavior to the <code class="chapterCode">if</code> statement, we can add an <code class="chapterCode">else</code> statement to run a block of code when the condition evaluates to <code class="chapterCode">false</code>. Take a look at the inclusion of an <code class="chapterCode">else</code> statement: </p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">if</span> (<span class="code-atom">false</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'The code in this block will not run.'</span>);
+} <span class="code-keyword">else</span> {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">'But the code in this block will!'</span>);
+}
+<span class="code-comment">// Prints "But the code in this block will!" </span></div></span></pre>
+<p class="chapterBody">An <code class="chapterCode">else</code> statement must be paired with an <code class="chapterCode">if</code> statement, and together they are referred to as an <code class="chapterCode">if...else</code> statement. In the example above, the <code class="chapterCode">else</code> statement:</p>
+<ul class="chapterUnorderedList">
+<li class="chapterList">Uses the <code class="chapterCode">else</code> keyword following the code block of an <code class="chapterCode">if</code> statement.</li>
+<li class="chapterList">Has a code block that is wrapped by a set of curly braces <code class="chapterCode">{}</code>.</li>
+<li class="chapterList">The code inside the <code class="chapterCode">else</code> statement code block will execute when the <code class="chapterCode">if</code> statement’s condition evaluates to <code class="chapterCode">false</code>.</li>
+</ul>
+<p class="chapterBody"><code class="chapterCode">if...else</code> statements allow us to automate solutions to yes-or-no questions, also known as <em>binary decisions</em>.</p>
+`
