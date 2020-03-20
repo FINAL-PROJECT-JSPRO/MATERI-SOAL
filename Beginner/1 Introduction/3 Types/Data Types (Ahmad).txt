@@ -1,5 +1,6 @@
-title: `<p class="chapterTitle">DATA TYPES</p>`
+title: `<h1 class="chapterTitle">DATA TYPES</h1>`
 body: `
+<h1 class="chapterSubtitle">Data Types</h1>
 <p class="chapterBody"><em>Data types</em> are the classifications we give to the different kinds of data that we use in programming.  In JavaScript, there are seven fundamental data types:</p>
 <ol class="chapterOrderedList">
 <li class="chapterList"><em>Number</em>: Any number, including numbers with decimals.</li>

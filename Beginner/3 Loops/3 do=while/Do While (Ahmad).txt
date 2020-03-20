@@ -1,0 +1,31 @@
+title: `<h1 class="chapterTitle"></h1>`
+body: `
+<h1 class="chapterSubtitle">Do...While Statements</h1>
+<p class="chapterBody">In some cases, you want a piece of code to run at least once and then loop based on a specific condition after its initial run. This is where the <code class="chapterCode">do...while</code> statement comes in.</p>
+<p class="chapterBody">A <code class="chapterCode">do...while</code> statement says to do a task once and then keep doing it until a specified condition is no longer met. The syntax for a <code class="chapterCode">do...while</code> statement looks like this:</p>
+<pre class="chapterPre"><span class="CodeBlock__39qg1FBUXaUYMtwg9-zKQ- wrap__31SsdEPy7KS--zmIH0YXmq defaults__26AhAxtPuPqy9msUlgGKkz cc__1MQz6eKDoLOc9B7nMEX9tN undefined chapterCode language-js"><div class="chapterCodeContainer"><span class="code-keyword">let</span> <span class="code-def">countString</span> <span class="code-operator">=</span> <span class="code-string">''</span>;
+<span class="code-keyword">let</span> <span class="code-def">i</span> <span class="code-operator">=</span> <span class="code-number">0</span>;
+
+<span class="code-keyword">do</span> {
+  <span class="code-variable">countString</span> <span class="code-operator">=</span> <span class="code-variable">countString</span> <span class="code-operator">+</span> <span class="code-variable">i</span>;
+  <span class="code-variable">i</span><span class="code-operator">++</span>;
+} <span class="code-keyword">while</span> (<span class="code-variable">i</span> <span class="code-operator">&lt;</span> <span class="code-number">5</span>);
+
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">countString</span>);</div></span></pre>
+<p class="chapterBody">In this example, the code block makes changes to the <code class="chapterCode">countString</code> variable by appending the string form of the <code class="chapterCode">i</code> variable to it. First, the code block after the <code class="chapterCode">do</code> keyword is executed once. Then the condition is evaluated. If the condition evaluates to <code class="chapterCode">true</code>, the block will execute again. The looping stops when the condition evaluates to <code class="chapterCode">false</code>.</p>
+<p class="chapterBody">Note that the <code class="chapterCode">while</code> and <code class="chapterCode">do...while</code> loop are different! Unlike the <code class="chapterCode">while</code> loop, <code class="chapterCode">do...while</code> will run at least once whether or not the condition evaluates to <code class="chapterCode">true</code>.</p>
+<pre class="chapterPre"><span class="CodeBlock__39qg1FBUXaUYMtwg9-zKQ- wrap__31SsdEPy7KS--zmIH0YXmq defaults__26AhAxtPuPqy9msUlgGKkz cc__1MQz6eKDoLOc9B7nMEX9tN undefined chapterCode language-js"><div class="chapterCodeContainer"><span class="code-keyword">const</span> <span class="code-def">firstMessage</span> <span class="code-operator">=</span> <span class="code-string">'I will print!'</span>;
+<span class="code-keyword">const</span> <span class="code-def">secondMessage</span> <span class="code-operator">=</span> <span class="code-string">'I will not print!'</span>; 
+
+<span class="code-comment">// A do while with a stopping condition that evaluates to false</span>
+<span class="code-keyword">do</span> {
+ <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">firstMessage</span>)
+} <span class="code-keyword">while</span> (<span class="code-atom">true</span> <span class="code-operator">===</span> <span class="code-atom">false</span>);
+
+<span class="code-comment">// A while loop with a stopping condition that evaluates to false</span>
+<span class="code-keyword">while</span> (<span class="code-atom">true</span> <span class="code-operator">===</span> <span class="code-atom">false</span>){
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">secondMessage</span>)
+};
+</div></span></pre>
+`
+SubjectId: 3

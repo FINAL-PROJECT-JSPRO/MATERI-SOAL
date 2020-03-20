@@ -1,5 +1,6 @@
-title: `<p class="chapterTitle">ARITHMETIC OPERATORS</p>`
+title: `<h1 class="chapterTitle">ARITHMETIC OPERATORS</h1>`
 body: `
+<h1 class="chapterSubtitle">Arithmetic Operators</h1>
 <p class="chapterBody">Basic arithmetic often comes in handy when programming. </p>
 <p class="chapterBody">An <em>operator</em> is a character that performs a task in our code. JavaScript has several built-in in <em>arithmetic operators</em>, that allow us to perform mathematical calculations on numbers. These include the following operators and their corresponding symbols:</p>
 <ol class="chapterOrderedList">

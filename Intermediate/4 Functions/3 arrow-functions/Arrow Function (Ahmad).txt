@@ -1,0 +1,12 @@
+title: `<h1>ARROW FUNCTION</h1>`
+body: `
+<h1 class="chapterSubtitle">Arrow Functions</h1>
+<p class="chapterBody">ES6 introduced <em>arrow function syntax</em>, a  shorter way to write functions by using the special “fat arrow” <code class="chapterCode">() =&gt;</code> notation. </p>
+<p class="chapterBody">Arrow functions remove the need to type out the keyword <code class="chapterCode">function</code> every time you need to create a function.  Instead, you first include the parameters inside the <code class="chapterCode">( )</code> and then add an arrow <code class="chapterCode">=&gt;</code> that points to the function body surrounded in <code class="chapterCode">{  }</code> like this:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">const</span> <span class="code-def">rectangleArea</span> <span class="code-operator">=</span> (<span class="code-def">width</span>, <span class="code-def">height</span>) <span class="code-operator">=&gt;</span> {
+  <span class="code-keyword">let</span> <span class="code-def">area</span> <span class="code-operator">=</span> <span class="code-variable-2">width</span> <span class="code-operator">*</span> <span class="code-variable-2">height</span>;
+  <span class="code-keyword">return</span> <span class="code-variable-2">area</span>;
+};</div></span></pre>
+<p class="chapterBody">It’s important to be familiar with the multiple ways of writing functions because you will come across each of these when reading other JavaScript code. </p>
+`
+SubjectId: 4

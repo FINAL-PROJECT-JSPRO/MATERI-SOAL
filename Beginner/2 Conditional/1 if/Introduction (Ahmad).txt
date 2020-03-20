@@ -1,4 +1,4 @@
-title: `<p class="chapterTitle"></p>`
+title: `<h1 class="chapterTitle">IF STATEMENT</h1>`
 body: `
 <p class="chapterBody">In life, we make decisions based on circumstances. Think of an everyday decision as mundane as falling asleep— if we are tired, we go to bed, otherwise, we wake up and start our day.</p>
 <p class="chapterBody">These if-else decisions can be modeled in code by creating <em>conditional statements</em>.  A conditional statement checks specific condition(s) and performs a task based on the condition(s).</p>

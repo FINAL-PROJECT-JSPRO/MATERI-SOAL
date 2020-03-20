@@ -1,0 +1,14 @@
+title: `<h1>ANONYMOUS FUNCTION</h1>`
+body: `
+<h1 class="chapterSubtitle">Anonymous Function</h1>
+<p class="chapterBody"><em>Anonymous functions</em> in JavaScript do not have a name property. They can be defined using the <code class="chapterCode">function</code> keyword, or as an arrow function. See the code example for the difference between a named function and an anonymous function.</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-comment">// Named function</span>
+<span class="code-keyword">function</span> <span class="code-def">rocketToMars</span>() {
+  <span class="code-keyword">return</span> <span class="code-string">'BOOM!'</span>;
+
+<span class="code-comment">// Anonymous function</span>
+<span class="code-keyword">const</span> <span class="code-def">rocketToMars</span> <span class="code-operator">=</span> <span class="code-keyword">function</span>() {
+  <span class="code-keyword">return</span> <span class="code-string">'BOOM!'</span>;
+}</div></span></pre>
+`
+SubjectId: 4
