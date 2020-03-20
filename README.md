@@ -35,6 +35,9 @@
 ## chapterCodeContainer
     Container untuk code di dalam CodeBlock
 
+## chapterImage
+    Image di dalam chapterBody
+
 
 # CODE STYLING
 ```javascript
