@@ -1,0 +1,51 @@
+title: `HIGHER-ORDER FUNCTION`
+body: `
+<h1 class="chapterSubtitle">Introduction</h1>
+<p class="chapterBody">We are often unaware of the number of assumptions we make when we communicate with other people in our native languages. If we told you to “count to three,” we would expect you to say or think the numbers one, two and three. We assumed you would know to start with “one” and end with “three”. With programming, we’re faced with needing to be more explicit with our directions to the computer. Here’s how we might tell the computer to “count to three”:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">for</span> (<span class="code-keyword">let</span> <span class="code-def">i</span> <span class="code-operator">=</span> <span class="code-number">1</span>; <span class="code-variable">i</span><span class="code-operator">&lt;=</span><span class="code-number">3</span>; <span class="code-variable">i</span><span class="code-operator">++</span>) {
+  <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">i</span>)
+}</div></span></pre>
+<p class="chapterBody">When we speak to other humans, we share a vocabulary that gives us quick ways to communicate complicated concepts. When we say “bake”, it calls to mind a familiar subroutine— preheating an oven, putting something into an oven for a set amount of time, and finally removing it. This allows us to <em>abstract</em> away a lot of the details and communicate key concepts more concisely. Instead of listing all those details, we can say, “We baked a cake,” and still impart all that meaning to you. </p>
+<p class="chapterBody">In programming, we can accomplish “abstraction” by writing functions. In addition to allowing us to reuse our code, functions help to make clear, readable programs. If you encountered <code class="chapterCode">countToThree()</code> in a program, you might be able to quickly guess what the function did without having to stop and read the function’s body. </p>
+<p class="chapterBody">We’re also going to learn about another way to add a level of abstraction to our programming: <em>higher-order functions</em>.  <em>Higher-order functions</em> are functions that accept other functions as arguments and/or return functions as output. This enables us to build abstractions on other abstractions, just like “We hosted a birthday party” is an abstraction that may build on the abstraction “We made a cake.”</p>
+<p class="chapterBody">In summary, using more abstraction in our code allows us to write more modular code which is easier to read and debug. </p>
+<h1 class="chapterSubtitle">Functions as Data</h1>
+<p class="chapterBody">JavaScript functions behave like any other data type in the language; we can assign functions to variables, and we can reassign them to new variables. </p>
+<p class="chapterBody">Below, we have an annoyingly long function name that hurts the readability of any code in which it’s used. Let’s pretend this function does important work and needs to be called repeatedly!</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">const</span> <span class="code-def">announceThatIAmDoingImportantWork</span> <span class="code-operator">=</span> () <span class="code-operator">=&gt;</span> {
+    <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-string">"I’m doing very important work!"</span>);
+};</div></span></pre>
+<p class="chapterBody">What if we wanted to rename this function without sacrificing the source code? We can re-assign the function to a variable with a suitably short name:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">const</span> <span class="code-def">busy</span> <span class="code-operator">=</span> <span class="code-variable">announceThatIAmDoingImportantWork</span>;
+
+<span class="code-variable">busy</span>(); <span class="code-comment">// This function call barely takes any space!</span></div></span></pre>
+<p class="chapterBody"><code class="chapterCode">busy</code> is a variable that holds a <em>reference</em> to our original function. If we could look up the address in memory of <code class="chapterCode">busy</code> and the address in memory of <code class="chapterCode">announceThatIAmDoingImportantWork</code> they would point to the same place. Our new <code class="chapterCode">busy()</code> function can be invoked with parentheses as if that was the name we originally gave our function. </p>
+<p class="chapterBody">Notice how we assign <code class="chapterCode">announceThatIAmDoingImportantWork</code> without parentheses as the value to the <code class="chapterCode">busy</code> variable. We want to assign the value of the function itself, not the value it returns when invoked. </p>
+<p class="chapterBody">In JavaScript, functions are <em>first class objects</em>. This means that, like other objects you’ve encountered, JavaScript functions can have properties and methods. </p>
+<p class="chapterBody">Since functions are a type of object, they have properties such as <code class="chapterCode">.length</code> and <code class="chapterCode">.name</code> and methods such as <code class="chapterCode">.toString()</code>. You can see more about the methods and properties of functions 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank" rel="noopener">in the documentation</a>.</p>
+<p class="chapterBody">Functions are special because we can invoke them, but we can still treat them like any other type of data.</p>
+<h1 class="chapterSubtitle">Functions as Parameters</h1>
+<p class="chapterBody">Since functions can behave like any other type of data in JavaScript, it might not surprise you to learn that we can also pass functions (into other functions) as parameters. A <em>higher-order function</em> is a function that either accepts functions as parameters, returns a function, or both! We call the functions that get passed in as parameters and invoked <em>callback functions</em> because they get called during the execution of the higher-order function.</p>
+<p class="chapterBody">When we pass a function in as an argument to another function, we don’t invoke it. Invoking the function would evaluate to the return value of that function call. With callbacks, we pass in the function itself by typing the function name <em>without</em> the parentheses (that would evaluate to the result of calling the function):</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">const</span> <span class="code-def">timeFuncRuntime</span> <span class="code-operator">=</span> <span class="code-def">funcParameter</span> <span class="code-operator">=&gt;</span> {
+   <span class="code-keyword">let</span> <span class="code-def">t1</span> <span class="code-operator">=</span> <span class="code-variable">Date</span>.<span class="code-property">now</span>();
+   <span class="code-variable-2">funcParameter</span>();
+   <span class="code-keyword">let</span> <span class="code-def">t2</span> <span class="code-operator">=</span> <span class="code-variable">Date</span>.<span class="code-property">now</span>();
+   <span class="code-keyword">return</span> <span class="code-variable-2">t2</span> <span class="code-operator">-</span> <span class="code-variable-2">t1</span>;
+}
+
+<span class="code-keyword">const</span> <span class="code-def">addOneToOne</span> <span class="code-operator">=</span> () <span class="code-operator">=&gt;</span> <span class="code-number">1</span> <span class="code-operator">+</span> <span class="code-number">1</span>;
+
+<span class="code-variable">timeFuncRuntime</span>(<span class="code-variable">addOneToOne</span>);</div></span></pre>
+<p class="chapterBody">We wrote a higher-order function, <code class="chapterCode">timeFuncRuntime()</code>. It takes in a function as an argument, saves a starting time, invokes the callback function, records the time after the function was called, and returns the time the function took to run by subtracting the starting time from the ending time. </p>
+<p class="chapterBody">This higher-order function could be used with any callback function which makes it a potentially powerful piece of code. </p>
+<p class="chapterBody">We then invoked <code class="chapterCode">timeFuncRuntime()</code> first with the <code class="chapterCode">addOneToOne()</code> function - note how we passed in <code class="chapterCode">addOneToOne</code> and did not invoke it. </p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-variable">timeFuncRuntime</span>(() <span class="code-operator">=&gt;</span> {
+  <span class="code-keyword">for</span> (<span class="code-keyword">let</span> <span class="code-def">i</span> <span class="code-operator">=</span> <span class="code-number">10</span>; <span class="code-variable-2">i</span><span class="code-operator">&gt;</span><span class="code-number">0</span>; <span class="code-variable-2">i</span><span class="code-operator">--</span>){
+    <span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable-2">i</span>);
+  }
+});</div></span></pre>
+<p class="chapterBody">In this example, we invoked <code class="chapterCode">timeFuncRuntime()</code> with an anonymous function that counts backwards from 10. Anonymous functions can be arguments too!</p>
+`
+SubjectId: 7

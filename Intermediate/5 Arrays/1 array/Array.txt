@@ -3,12 +3,12 @@ body: `
 <p class="chapterBody">To work with a chunk of digital data, we’ll first have to find a way to represent it in our machine’s memory. Say, for example, that we want to represent a collection of the numbers 2, 3, 5, 7, and 11.</p>
 <p class="chapterBody">We could get creative with strings—after all, strings can have any length, so we can put a lot of data into them—and use "2 3 5 7 11" as our representation. But this is awkward. You’d have to somehow extract the digits and convert them back to numbers to access them.</p>
 <p class="chapterBody">Fortunately, JavaScript provides a data type specifically for storing sequences of values. It is called an array and is written as a list of values between square brackets, separated by commas.</p>
-<pre class="snippet cm-s-default" data-language="javascript" style="display: none;"><a class="c_ident" id="c_05cIH1hy/D" href="#c_05cIH1hy/D" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">listOfNumbers</span> <span class="cm-operator">=</span> [<span class="cm-number">2</span>, <span class="cm-number">3</span>, <span class="cm-number">5</span>, <span class="cm-number">7</span>, <span class="cm-number">11</span>];
-<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">listOfNumbers</span>[<span class="cm-number">2</span>]);
-<span class="cm-comment">// → 5</span>
-<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">listOfNumbers</span>[<span class="cm-number">0</span>]);
-<span class="cm-comment">// → 2</span>
-<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">listOfNumbers</span>[<span class="cm-number">2</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>]);
-<span class="cm-comment">// → 3</span></pre>
+<pre class="snippet code-s-default" data-language="javascript" style="display: none;"><a class="c_ident" id="c_05cIH1hy/D" href="#c_05cIH1hy/D" tabindex="-1" role="presentation"></a><span class="code-keyword">let</span> <span class="code-def">listOfNumbers</span> <span class="code-operator">=</span> [<span class="code-number">2</span>, <span class="code-number">3</span>, <span class="code-number">5</span>, <span class="code-number">7</span>, <span class="code-number">11</span>];
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">listOfNumbers</span>[<span class="code-number">2</span>]);
+<span class="code-comment">// → 5</span>
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">listOfNumbers</span>[<span class="code-number">0</span>]);
+<span class="code-comment">// → 2</span>
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">listOfNumbers</span>[<span class="code-number">2</span> <span class="code-operator">-</span> <span class="code-number">1</span>]);
+<span class="code-comment">// → 3</span></pre>
 `
 

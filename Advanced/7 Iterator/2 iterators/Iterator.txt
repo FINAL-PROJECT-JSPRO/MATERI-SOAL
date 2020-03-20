@@ -1,0 +1,53 @@
+title: `<h1>ITERATORS</h1>`
+body: `
+<h1 class="chapterSubtitle">Introduction to Iterators</h1>
+<p class="chapterBody">Imagine you had a grocery list and you wanted to know what each item on the list was. You’d have to scan through each row and check for the item. This common task is similar to what we have to do when we want to iterate over, or loop through, an array. One tool at our disposal is the <code class="chapterCode">for</code> loop. However, we also have access to built-in array methods which make looping easier.</p>
+<p class="chapterBody">The built-in JavaScript array methods that help us iterate are called <em>iteration methods</em>, at times referred to as <em>iterators</em>. Iterators are methods called on arrays to manipulate elements and return values.</p>
+<p class="chapterBody">In this lesson, you will learn the syntax for these methods, their return values, how to use the documentation to understand them, and how to choose the right iterator method for a given task. </p>
+<h1 class="chapterSubtitle">The .forEach() Method</h1>
+<p class="chapterBody">The first iteration method that we’re going to learn is <code class="chapterCode">.forEach()</code>. Aptly named, <code class="chapterCode">.forEach()</code> will execute the same code for each element of an array.<br><img src="https://s3.amazonaws.com/codecademy-content/courses/learn-javascript-iterators/iterator+anatomy.svg" alt="Diagram outlining the parts of an array iterator including the array identifier, the section that is the iterator, and the callback function" class="chapterImage"></p>
+<p class="chapterBody">The code above will log a nicely formatted list of the groceries to the console.  Let’s explore the syntax of invoking <code class="chapterCode">.forEach()</code>. </p>
+<ul class="chapterUnorderedList">
+<li class="chapterList"><code class="chapterCode">groceries.forEach()</code> calls the <code class="chapterCode">forEach</code> method on the <code class="chapterCode">groceries</code> array. </li>
+<li class="chapterList"><code class="chapterCode">.forEach()</code> takes an argument of callback function. Remember, a callback function is a function passed as an argument into another function. </li>
+<li class="chapterList"><code class="chapterCode">.forEach()</code> loops through the array and executes the callback function for each element. During each execution, the current element is passed as an argument to the callback function.</li>
+<li class="chapterList">The return value for <code class="chapterCode">.forEach()</code> will always be <code class="chapterCode">undefined</code>.</li>
+</ul>
+<h1 class="chapterSubtitle">The .map() Method</h1>
+<p class="chapterBody">The second iterator we’re going to cover is <code class="chapterCode">.map()</code>. When <code class="chapterCode">.map()</code> is called on an array, it takes an argument of a callback function and returns a new array! Take a look at an example of calling <code class="chapterCode">.map()</code>:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">const</span> <span class="code-def">numbers</span> <span class="code-operator">=</span> [<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>, <span class="code-number">4</span>, <span class="code-number">5</span>]; 
+
+<span class="code-keyword">const</span> <span class="code-def">bigNumbers</span> <span class="code-operator">=</span> <span class="code-variable">numbers</span>.<span class="code-property">map</span>(<span class="code-def">number</span> <span class="code-operator">=&gt;</span> {
+  <span class="code-keyword">return</span> <span class="code-variable-2">number</span> <span class="code-operator">*</span> <span class="code-number">10</span>;
+});</div></span></pre>
+<p class="chapterBody"><code class="chapterCode">.map()</code> works in a similar manner to <code class="chapterCode">.forEach()</code>— the major difference is that <code class="chapterCode">.map()</code> returns a new array. </p>
+<p class="chapterBody">In the example above: </p>
+<ul class="chapterUnorderedList">
+<li class="chapterList"><code class="chapterCode">numbers</code> is an array of numbers. </li>
+<li class="chapterList"><code class="chapterCode">bigNumbers</code> will store the return value of calling <code class="chapterCode">.map()</code> on <code class="chapterCode">numbers</code>.</li>
+<li class="chapterList"><code class="chapterCode">numbers.map</code> will iterate through each element in the <code class="chapterCode">numbers</code> array and pass the element into the callback function.</li>
+<li class="chapterList"><code class="chapterCode">return number * 10</code> is the code we wish to execute upon each element in the array. This will save each value from the <code class="chapterCode">numbers</code> array, multiplied by <code class="chapterCode">10</code>, to a new array. </li>
+</ul>
+<p class="chapterBody">If we take a look at <code class="chapterCode">numbers</code> and <code class="chapterCode">bigNumbers</code>:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">numbers</span>); <span class="code-comment">// Output: [1, 2, 3, 4, 5]</span>
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">bigNumbers</span>); <span class="code-comment">// Output: [10, 20, 30, 40, 50]</span></div></span></pre>
+<p class="chapterBody">Notice that the elements in <code class="chapterCode">numbers</code> were not altered and <code class="chapterCode">bigNumbers</code> is a new array. </p>
+<h1 class="chapterSubtitle">The .filter() Method</h1>
+<p class="chapterBody">Another useful iterator method is <code class="chapterCode">.filter()</code>. Like <code class="chapterCode">.map()</code>, <code class="chapterCode">.filter()</code> returns a new array. However, <code class="chapterCode">.filter()</code> returns an array of elements after filtering out certain elements from the original array. The callback function for the <code class="chapterCode">.filter()</code> method should return <code class="chapterCode">true</code> or <code class="chapterCode">false</code> depending on the element that is passed to it. The elements that cause the callback function to return <code class="chapterCode">true</code> are added to the new array. Take a look at the following example:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-keyword">const</span> <span class="code-def">words</span> <span class="code-operator">=</span> [<span class="code-string">'chair'</span>, <span class="code-string">'music'</span>, <span class="code-string">'pillow'</span>, <span class="code-string">'brick'</span>, <span class="code-string">'pen'</span>, <span class="code-string">'door'</span>]; 
+
+<span class="code-keyword">const</span> <span class="code-def">shortWords</span> <span class="code-operator">=</span> <span class="code-variable">words</span>.<span class="code-property">filter</span>(<span class="code-def">word</span> <span class="code-operator">=&gt;</span> {
+  <span class="code-keyword">return</span> <span class="code-variable-2">word</span>.<span class="code-property">length</span> <span class="code-operator">&lt;</span> <span class="code-number">6</span>;
+});</div></span></pre>
+<ul class="chapterUnorderedList">
+<li class="chapterList"><code class="chapterCode">words</code> is an array that contains string elements. </li>
+<li class="chapterList"><code class="chapterCode">const shortWords =</code> declares a new variable that will store the returned array from invoking <code class="chapterCode">.filter()</code>. </li>
+<li class="chapterList">The callback function is an arrow function has a single parameter, <code class="chapterCode">word</code>. Each element in the <code class="chapterCode">words</code> array will be passed to this function as an argument. </li>
+<li class="chapterList"><code class="chapterCode">word.length &lt; 6;</code> is the condition in the callback function. Any <code class="chapterCode">word</code> from the <code class="chapterCode">words</code> array that has fewer than <code class="chapterCode">6</code> characters will be added to the <code class="chapterCode">shortWords</code> array. </li>
+</ul>
+<p class="chapterBody">Let’s also check the values of <code class="chapterCode">words</code> and <code class="chapterCode">shortWords</code>:</p>
+<pre class="chapterPre"><span class="chapterCodeBlock"><div class="chapterCodeContainer"><span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">words</span>); <span class="code-comment">// Output: ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; </span>
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">shortWords</span>); <span class="code-comment">// Output: ['chair', 'music', 'brick', 'pen', 'door']</span></div></span></pre>
+<p class="chapterBody">Observe how <code class="chapterCode">words</code> was not mutated, i.e. changed, and <code class="chapterCode">shortWords</code> is a new array. </p>
+`
+SubjectId: 7

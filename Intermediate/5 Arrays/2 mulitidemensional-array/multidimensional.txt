@@ -1,13 +1,13 @@
 title: `<p class="chapterTitle">Multidimensional Array</p>`
 body: `
 <p class="chapterBody">Arrays can store other arrays. When an array contains another array it is known as a nested array or multidimensional array. Examine the example below:</p>
-<div class="CodeMirror"><span class="cm-keyword">const</span> <span class="cm-def">nestedArr</span> <span class="cm-operator">=</span> [[<span class="cm-number">1</span>], [<span class="cm-number">2</span>, <span class="cm-number">3</span>]];</div>
+<div class="CodeMirror"><span class="code-keyword">const</span> <span class="code-def">nestedArr</span> <span class="code-operator">=</span> [[<span class="code-number">1</span>], [<span class="code-number">2</span>, <span class="code-number">3</span>]];</div>
 <p class="chapterBody">To access the nested arrays we can use bracket notation with the index value, just like we did to access any other element:</p>
-<div class="CodeMirror"><span class="cm-keyword">const</span> <span class="cm-def">nestedArr</span> <span class="cm-operator">=</span> [[<span class="cm-number">1</span>], [<span class="cm-number">2</span>, <span class="cm-number">3</span>]];
-<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">nestedArr</span>[<span class="cm-number">1</span>]); <span class="cm-comment">// Output: [2, 3]</span></div>
+<div class="CodeMirror"><span class="code-keyword">const</span> <span class="code-def">nestedArr</span> <span class="code-operator">=</span> [[<span class="code-number">1</span>], [<span class="code-number">2</span>, <span class="code-number">3</span>]];
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">nestedArr</span>[<span class="code-number">1</span>]); <span class="code-comment">// Output: [2, 3]</span></div>
 <p class="chapterBody">Notice that nestedArr[1] will grab the element in index 1 which is the array [2, 3]. Then, if we wanted to access the elements within the nested array we can chain, or add on, more bracket notation with index values.</p>
-<div class="CodeMirror"><span class="cm-keyword">const</span> <span class="cm-def">nestedArr</span> <span class="cm-operator">=</span> [[<span class="cm-number">1</span>], [<span class="cm-number">2</span>, <span class="cm-number">3</span>]];
-<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">nestedArr</span>[<span class="cm-number">1</span>]); <span class="cm-comment">// Output: [2, 3]</span>
-<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">nestedArr</span>[<span class="cm-number">1</span>][<span class="cm-number">0</span>]); <span class="cm-comment">// Output: 2</span></div>
+<div class="CodeMirror"><span class="code-keyword">const</span> <span class="code-def">nestedArr</span> <span class="code-operator">=</span> [[<span class="code-number">1</span>], [<span class="code-number">2</span>, <span class="code-number">3</span>]];
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">nestedArr</span>[<span class="code-number">1</span>]); <span class="code-comment">// Output: [2, 3]</span>
+<span class="code-variable">console</span>.<span class="code-property">log</span>(<span class="code-variable">nestedArr</span>[<span class="code-number">1</span>][<span class="code-number">0</span>]); <span class="code-comment">// Output: 2</span></div>
 <p class="chapterBody">In the second console.log() statement, we have two bracket notations chained to nestedArr. We know that nestedArr[1] is the array [2, 3]. Then to grab the first element from that array, we use nestedArr[1][0] and we get the value of 2.</p>
 `
