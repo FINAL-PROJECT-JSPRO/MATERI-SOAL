@@ -1,0 +1,15 @@
+title: `<p class="chapterTitle">ARITHMETIC OPERATORS</p>`
+body: `
+<p class="chapterBody">Basic arithmetic often comes in handy when programming. </p>
+<p class="chapterBody">An <em>operator</em> is a character that performs a task in our code. JavaScript has several built-in in <em>arithmetic operators</em>, that allow us to perform mathematical calculations on numbers. These include the following operators and their corresponding symbols:</p>
+<ol class="chapterOrderedList">
+<li class="chapterList">Add: <code class="chapterCode">+</code></li>
+<li class="chapterList">Subtract: <code class="chapterCode">-</code></li>
+<li class="chapterList">Multiply: <code class="chapterCode">*</code></li>
+<li class="chapterList">Divide: <code class="chapterCode">/</code></li>
+<li class="chapterList">Remainder: <code class="chapterCode">%</code></li>
+</ol>
+<p class="chapterBody">Note that when we <code class="chapterCode">console.log()</code> the computer will evaluate the expression inside the parentheses and print that result to the console. If we wanted to print the characters <code class="chapterCode">3 + 4</code>, we would wrap them in quotes and print them as a string. </p>
+<p class="chapterBody">The remainder operator, sometimes called <em>modulo</em>, returns the number that remains after the right-hand number divides into the left-hand number as many times as it evenly can: <code class="chapterCode">11 % 3</code> equals 2 because 3 fits into 11 three times, leaving 2 as the remainder.</p>
+`
+SubjectId: 1
