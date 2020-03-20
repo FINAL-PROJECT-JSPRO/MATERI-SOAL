@@ -27,4 +27,37 @@
     List di dalem ul maupun ol => <li class="chapterList">
 
 ## chapterCode
-    Class untuk code container => <code class="chapterCode">
+    Class untuk simple code tag => <code class="chapterCode">
+
+## chapterCodeBlock
+    Class untuk code tag rumit (js script misal)
+
+## chapterCodeContainer
+    Container untuk code di dalam CodeBlock
+
+
+# CODE STYLING
+```javascript
+if (true) {
+    console.log('This message will print!'); 
+} 
+// Prints "This message will print!"
+```
+
+## code-keyword
+    if
+
+## code-atom
+    true
+
+## code-variable
+    console
+
+## code-property
+    log
+
+## code-string
+    "This message will print!"
+
+## code-comment
+    // Prints "This message will print!"
