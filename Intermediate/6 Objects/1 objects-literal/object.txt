@@ -2,7 +2,7 @@ title: `<p class="chapterTitle">Object Literal</p>`
 body: `
 <p class="chapterBody">Back to the weresquirrel. A set of daily log entries can be represented as an array. But the entries do not consist of just a number or a string—each entry needs to store a list of activities and a Boolean value that indicates whether Jacques turned into a squirrel or not. Ideally, we would like to group these together into a single value and then put those grouped values into an array of log entries.</p>
 <p class="chapterBody">Objects can be assigned to variables just like any JavaScript type. We use curly braces, {}, to designate an object literal:</p>
-<div class="CodeMirror"><span class="cm-keyword">let</span> <span class="cm-def">spaceship</span> <span class="cm-operator">=</span> {}; <span class="cm-comment">// spaceship is an empty object</span></div>
+<div class="CodeMirror"><span class="code-keyword">let</span> <span class="code-def">spaceship</span> <span class="code-operator">=</span> {}; <span class="code-comment">// spaceship is an empty object</span></div>
 <p class="chapterBody">We make a key-value pair by writing the key’s name, or identifier, followed by a colon and then the value. We separate each key-value pair in an object literal with a comma (,). Keys are strings, but when we have a key that does not have any special characters in it, JavaScript allows us to omit the quotation marks:</p>
 <img src="https://s3.amazonaws.com/codecademy-content/courses/learn-javascript-objects/objectliteraldiagram.svg">
 `
