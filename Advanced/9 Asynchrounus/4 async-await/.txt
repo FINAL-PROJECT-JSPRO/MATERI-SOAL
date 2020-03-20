@@ -1,0 +1,26 @@
+title: `<p class="chapterTitle">Async Await</p>`
+body: `
+<h1>Aync<h1>
+<p class="chapterBody">The async function declaration defines an asynchronous function — a function that is an AsyncFunction object. Asynchronous functions operate in a separate order than the rest of the code via the event loop, returning an implicit Promise as its result. But the syntax and structure of code using async functions looks like standard synchronous functions.</p>
+<h1>Await<h1>
+<p class="chapterBody">The await expression causes async function execution to pause until a Promise is settled (that is, fulfilled or rejected), and to resume execution of the async function after fulfillment. When resumed, the value of the await expression is that of the fulfilled Promise.</p>
+<p class="chapterBody">If the Promise is rejected, the await expression throws the rejected value.</p>
+<p class="chapterBody">If the value of the expression following the await operator is not a Promise, it's converted to a resolved Promise.</p>
+<p class="chapterBody">An await can split execution flow, allowing the caller of the await's function to resume execution before the deferred continuation of the await's function. After the await defers the continuation of its function, if this is the first await executed by the function, immediate execution also continues by returning to the function's caller a pending Promise for the completion of the await's function and resuming execution of that caller.</p>
+<p class="chapterBody">If a Promise is passed to an await expression, it waits for the Promise to be fulfilled and returns the fulfilled value.</p>
+<pre class="brush: js line-numbers  language-js"><code class="  language-js"><span class="token keyword">function</span> <span class="token function">resolveAfter2Seconds</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">resolve</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">resolveAfter2Seconds</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+`
