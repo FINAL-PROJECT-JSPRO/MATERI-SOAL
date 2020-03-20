@@ -1,0 +1,16 @@
+title: `<p class="chapterTitle">The .push() and .pop() Method </p>`
+body: `
+<p class="chapterBody">Let’s learn about some built-in JavaScript methods that make working with arrays easier. These methods are specifically called on arrays to make common tasks, like adding and removing elements, more straightforward.
+One method, .push() allows us to add items to the end of an array. Here is an example of how this is used:</p>
+<div class="CodeMirror"><span class="cm-keyword">const</span> <span class="cm-def">itemTracker</span> <span class="cm-operator">=</span> [<span class="cm-string">'item 0'</span>, <span class="cm-string">'item 1'</span>, <span class="cm-string">'item 2'</span>];
+<span class="cm-variable">itemTracker</span>.<span class="cm-property">push</span>(<span class="cm-string">'item 3'</span>, <span class="cm-string">'item 4'</span>);
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">itemTracker</span>); 
+<span class="cm-comment">// Output: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4'];</span></div>
+<p class="chapterBody">Another array method, .pop(), removes the last item of an array.</p>
+<div class="CodeMirror"><span class="cm-keyword">const</span> <span class="cm-def">newItemTracker</span> <span class="cm-operator">=</span> [<span class="cm-string">'item 0'</span>, <span class="cm-string">'item 1'</span>, <span class="cm-string">'item 2'</span>];
+<span class="cm-keyword">const</span> <span class="cm-def">removed</span> <span class="cm-operator">=</span> <span class="cm-variable">newItemTracker</span>.<span class="cm-property">pop</span>();
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">newItemTracker</span>); 
+<span class="cm-comment">// Output: [ 'item 0', 'item 1' ]</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">removed</span>);
+<span class="cm-comment">// Output: item 2</span></div>
+`
